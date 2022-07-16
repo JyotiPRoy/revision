@@ -1,16 +1,14 @@
-# revision
+# Revision App
 
-Revision Helper
+An app to help me review questions & important topics during Interview Prep
 
-## Getting Started
+This is the frontend application, the backend can be found here: [revision_backend](https://github.com/JyotiPRoy/revision_backend)
 
-This project is a starting point for a Flutter application.
+### Screenshots
 
-A few resources to get you started if this is your first Flutter project:
+[<img src='screenshots/ss3.jpeg' width='200'>](screenshots/ss3.jpeg)
+[<img src='screenshots/ss2.jpeg' width='200'>](screenshots/ss2.jpeg)
+[<img src='screenshots/ss1.jpeg' width='200'>](screenshots/ss1.jpeg)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+[<img src='screenshots/ss4.png' width='610'>](screenshots/ss4.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

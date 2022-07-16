@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "LaunchImage.png",
+      "filename" : "iPhone_11__iPhone_XR_portrait.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "LaunchImage@2x.png",
+      "filename" : "iPhone_11_Pro_Max__iPhone_XS_Max_portrait.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "LaunchImage@3x.png",
+      "filename" : "iPhone_13_Pro_Max__iPhone_12_Pro_Max_portrait.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
