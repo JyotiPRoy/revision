@@ -25,6 +25,22 @@ mixin _$HomeStore on _HomeStore, Store {
     });
   }
 
+  late final _$addFutureAtom =
+      Atom(name: '_HomeStore.addFuture', context: context);
+
+  @override
+  FutureStore<bool> get addFuture {
+    _$addFutureAtom.reportRead();
+    return super.addFuture;
+  }
+
+  @override
+  set addFuture(FutureStore<bool> value) {
+    _$addFutureAtom.reportWrite(value, super.addFuture, () {
+      super.addFuture = value;
+    });
+  }
+
   late final _$sheetsFutureAtom =
       Atom(name: '_HomeStore.sheetsFuture', context: context);
 
@@ -192,6 +208,15 @@ mixin _$HomeStore on _HomeStore, Store {
     return _$fetchAllSheetsAsyncAction.run(() => super.fetchAllSheets());
   }
 
+  late final _$addSheetAsyncAction =
+      AsyncAction('_HomeStore.addSheet', context: context);
+
+  @override
+  Future<bool> addSheet({required Sheet sheet, List<Topic>? topics}) {
+    return _$addSheetAsyncAction
+        .run(() => super.addSheet(sheet: sheet, topics: topics));
+  }
+
   late final _$fetchAllTopicsAsyncAction =
       AsyncAction('_HomeStore.fetchAllTopics', context: context);
 
@@ -253,6 +278,7 @@ mixin _$HomeStore on _HomeStore, Store {
   String toString() {
     return '''
 currentPage: ${currentPage},
+addFuture: ${addFuture},
 sheetsFuture: ${sheetsFuture},
 topicsFuture: ${topicsFuture},
 questionsFuture: ${questionsFuture},

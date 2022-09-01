@@ -18,6 +18,9 @@ abstract class _HomeStore with Store {
   int currentPage = 0;
 
   @observable
+  FutureStore<bool> addFuture = FutureStore();
+
+  @observable
   FutureStore<List<Sheet>> sheetsFuture = FutureStore();
 
   @observable
@@ -69,6 +72,32 @@ abstract class _HomeStore with Store {
       UiUtils.showError(
         message: "Error in getAllSheets(), Reason: ${e.toString()}",
       );
+    }
+  }
+
+  @action
+  Future<bool> addSheet({required Sheet sheet, List<Topic>? topics}) async {
+    try {
+      final sheetId = await _apiService.addSheet(sheet);
+      if (sheetId.isNotEmpty) {
+        final topicFutures = <Future>[];
+        if (topics != null) {
+          topics.forEach((topic) {
+            topicFutures.add(_apiService.addTopicToSheet(sheet.id, topic));
+          });
+          await Future.wait(topicFutures);
+        }
+
+        fetchAllSheets();
+        return true;
+      } else {
+        return false;
+      }
+    } catch (e) {
+      UiUtils.showError(
+        message: "Error in getAllSheets(), Reason: ${e.toString()}",
+      );
+      return false;
     }
   }
 
