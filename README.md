@@ -7,7 +7,7 @@ This is the frontend application, the backend can be found here: [revision_backe
 ### Screenshots
 
 [<img src='screenshots/ss3.jpeg' width='200'>](screenshots/ss3.jpeg)
-[<img src='screenshots/ss2.jpeg' width='200'>](screenshots/ss2.png)
+[<img src='screenshots/ss2.png' width='200'>](screenshots/ss2.png)
 [<img src='screenshots/ss1.jpeg' width='200'>](screenshots/ss1.jpeg)
 
 [<img src='screenshots/ss4.png' width='610'>](screenshots/ss4.png)
